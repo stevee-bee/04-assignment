@@ -1,5 +1,8 @@
 run_analysis <- function() {
         
+        # script may take a few seconds
+        message("\nProcessing...")
+        
         # load required libraries
         library(reshape2)
         
@@ -118,4 +121,15 @@ run_analysis <- function() {
         # take the mean of the measurements for each activity-subject-variable 
         # combination and reshape to a tidy wide format
         df <- dcast(df, activity + subject ~ variable, mean)
+        
+        # processing data is completed
+        message("\nFinished!")
+        
+        # output the resulting tidy data set
+        filename <- "measurement_means.txt"
+        write.table(df, file = filename, row.names = FALSE)
+        message("\nThe tidy wide data set has been written to\nthe file '", 
+                filename, "' in the working directory:\n", 
+                getwd())
+        View(df)
 }
