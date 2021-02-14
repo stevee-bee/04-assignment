@@ -22,7 +22,7 @@ Defines all of the variables of the resulting data set, the original data source
 R script commands used to import and view the submitted file, 'measurement_means.txt', for this assignment.
 
 ### `run_analysis.R`  
-R script file that contains all of the transformations needed to recreate the tidy data set in the wide form as mentioned in the rubric. You can either run it as a function with no arguments or as individual commands. A data frame is returned. In order to successfully run, the following prerequisites must be met:
+R script file that contains all of the transformations needed to recreate the tidy data set in the wide form as mentioned in the rubric. You can either run it as a function with no arguments or as individual commands. A data frame is returned and a text file, measurement_means.txt, is written to the working directory. In order to successfully run, the following prerequisites must be met:
 
 1. Pre-installation of 'reshape2' library.
 2. This script must run in the same folder as the unpacked source zip file ([link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)). Once the source data is unzipped, the working directory needs to contain the following folder structure/file listing before running the script: 
